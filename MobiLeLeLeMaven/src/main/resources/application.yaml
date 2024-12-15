@@ -1,0 +1,26 @@
+#spring:
+#  application:
+#    name: mobileleleYaml
+#  thymeleaf:
+#    check-template-location: true
+#    cache: false
+#    prefix: file:./src/main/resources/templates/
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mobiLeLeLeMaven?createDatabaseIfNotExist=true
+    username: root
+    password: NicolaHristov13
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+logging:
+  level:
+    org: WARN
+    blog: WARN
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor: TRACE
